@@ -70,7 +70,10 @@
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="passwordTextField" pref="110" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="PasswordField" min="-2" max="-2" attributes="0"/>
+                              </Group>
                               <Component id="userTextField" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -90,7 +93,7 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="passwordTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="PasswordField" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="24" max="32767" attributes="0"/>
                   <Component id="loginButton" min="-2" max="-2" attributes="0"/>
@@ -120,11 +123,9 @@
         </Component>
         <Component class="javax.swing.JTextField" name="userTextField">
         </Component>
-        <Component class="javax.swing.JTextField" name="passwordTextField">
+        <Component class="javax.swing.JPasswordField" name="PasswordField">
           <Properties>
-            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Text Cursor"/>
-            </Property>
+            <Property name="text" type="java.lang.String" value="jPasswordField1"/>
           </Properties>
         </Component>
       </SubComponents>

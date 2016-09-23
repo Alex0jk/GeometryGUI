@@ -44,7 +44,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/resources/cuadrado.png"))); // NOI18N
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/resources/cubo.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/resources/cubo2.png"))); // NOI18N
 
         jButton1.setText("Select");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
