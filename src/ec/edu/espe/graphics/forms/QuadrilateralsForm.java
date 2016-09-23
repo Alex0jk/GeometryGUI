@@ -7,6 +7,7 @@ package ec.edu.espe.graphics.forms;
 
 import ec.edu.espe.graphics.forms.text.ComonText;
 import ec.edu.espe.graphics.forms.text.ShapesCatalog;
+import ec.edu.espe.graphics.forms.text.TransformationComonText;
 import ec.edu.espe.math.geometry.shape.Shape;
 import ec.edu.espe.math.geometry.shape.quadrilaterals.Parallelogram;
 import ec.edu.espe.math.geometry.shape.quadrilaterals.Rectangle;
@@ -48,6 +49,8 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
         txtArea = new javax.swing.JTextField();
         txtPerimeter = new javax.swing.JTextField();
         lblPerimeter = new javax.swing.JLabel();
+        cmbIn = new javax.swing.JComboBox<>();
+        cmbOut = new javax.swing.JComboBox<>();
         RhombusPanel = new javax.swing.JPanel();
         lblMaxDiag = new javax.swing.JLabel();
         lblMinDiag = new javax.swing.JLabel();
@@ -58,6 +61,8 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
         txtArea3 = new javax.swing.JTextField();
         lblPerimeter3 = new javax.swing.JLabel();
         txtPerimeter3 = new javax.swing.JTextField();
+        cmbIn2 = new javax.swing.JComboBox<>();
+        cmbOut2 = new javax.swing.JComboBox<>();
         ParalelogramPanel = new javax.swing.JPanel();
         lblHeight2 = new javax.swing.JLabel();
         lblSide2 = new javax.swing.JLabel();
@@ -70,6 +75,8 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
         txtPerimeter4 = new javax.swing.JTextField();
         lblWidth2 = new javax.swing.JLabel();
         txtWidth2 = new javax.swing.JTextField();
+        cmbIn3 = new javax.swing.JComboBox<>();
+        cmbOut3 = new javax.swing.JComboBox<>();
         TrapezoidPanel = new javax.swing.JPanel();
         lblMinBase = new javax.swing.JLabel();
         txtMinBase = new javax.swing.JTextField();
@@ -82,6 +89,8 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
         txtPerimeter5 = new javax.swing.JTextField();
         lblHeight3 = new javax.swing.JLabel();
         txtHeight3 = new javax.swing.JTextField();
+        cmbIn4 = new javax.swing.JComboBox<>();
+        cmbOut4 = new javax.swing.JComboBox<>();
         RectanglePanel = new javax.swing.JPanel();
         lblWidth = new javax.swing.JLabel();
         lblHeight = new javax.swing.JLabel();
@@ -92,11 +101,13 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
         txtArea2 = new javax.swing.JTextField();
         lblPerimeter2 = new javax.swing.JLabel();
         txtPerimeter2 = new javax.swing.JTextField();
+        cmbIn1 = new javax.swing.JComboBox<>();
+        cmbOut1 = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
         btnMainMenu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(950, 550));
+        setPreferredSize(new java.awt.Dimension(1020, 600));
         getContentPane().setLayout(null);
 
         SquarePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Trapezoid", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
@@ -122,6 +133,10 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
         lblPerimeter.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblPerimeter.setText("Perimetro");
 
+        cmbIn.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\\Km", "Hm", "Dm", "m", "dm", "cm", "mm" }));
+
+        cmbOut.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\\Km", "Hm", "Dm", "m", "dm", "cm", "mm" }));
+
         javax.swing.GroupLayout SquarePanelLayout = new javax.swing.GroupLayout(SquarePanel);
         SquarePanel.setLayout(SquarePanelLayout);
         SquarePanelLayout.setHorizontalGroup(
@@ -131,18 +146,20 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
                 .addGroup(SquarePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(SquarePanelLayout.createSequentialGroup()
                         .addComponent(lblSide, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                        .addComponent(txtSide, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(cmbIn, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(SquarePanelLayout.createSequentialGroup()
+                        .addGroup(SquarePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(lblPerimeter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnCalculate, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
+                            .addComponent(lblArea, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txtSide, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SquarePanelLayout.createSequentialGroup()
-                        .addComponent(lblPerimeter)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
-                        .addComponent(txtPerimeter, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SquarePanelLayout.createSequentialGroup()
                         .addGroup(SquarePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblArea)
-                            .addComponent(btnCalculate, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txtArea, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txtArea, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cmbOut, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtPerimeter, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
         );
         SquarePanelLayout.setVerticalGroup(
@@ -151,9 +168,12 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(SquarePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblSide)
-                    .addComponent(txtSide, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtSide, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37)
-                .addComponent(btnCalculate)
+                .addGroup(SquarePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCalculate)
+                    .addComponent(cmbOut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(23, 23, 23)
                 .addGroup(SquarePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblArea)
@@ -166,7 +186,7 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
         );
 
         getContentPane().add(SquarePanel);
-        SquarePanel.setBounds(14, 49, 270, 199);
+        SquarePanel.setBounds(14, 49, 310, 200);
 
         RhombusPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Trapezoid", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
 
@@ -194,6 +214,10 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
 
         txtPerimeter3.setEnabled(false);
 
+        cmbIn2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\\Km", "Hm", "Dm", "m", "dm", "cm", "mm" }));
+
+        cmbOut2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\\Km", "Hm", "Dm", "m", "dm", "cm", "mm" }));
+
         javax.swing.GroupLayout RhombusPanelLayout = new javax.swing.GroupLayout(RhombusPanel);
         RhombusPanel.setLayout(RhombusPanelLayout);
         RhombusPanelLayout.setHorizontalGroup(
@@ -204,25 +228,33 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
                     .addGroup(RhombusPanelLayout.createSequentialGroup()
                         .addGroup(RhombusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(RhombusPanelLayout.createSequentialGroup()
-                                .addGroup(RhombusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(lblPerimeter3, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
-                                    .addComponent(lblArea3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(btnCalculate3, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
+                                .addGap(30, 30, 30))
                             .addGroup(RhombusPanelLayout.createSequentialGroup()
-                                .addComponent(btnCalculate3, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
-                                .addGap(30, 30, 30)))
+                                .addGroup(RhombusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(lblArea3, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
+                                    .addComponent(lblPerimeter3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addGroup(RhombusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtArea3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
-                            .addComponent(txtPerimeter3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)))
+                            .addComponent(txtPerimeter3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE))
+                        .addContainerGap())
                     .addGroup(RhombusPanelLayout.createSequentialGroup()
                         .addGroup(RhombusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblMinDiag, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblMaxDiag, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(RhombusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtMaxDiag)
-                            .addComponent(txtMinDiag, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE))))
-                .addContainerGap())
+                            .addGroup(RhombusPanelLayout.createSequentialGroup()
+                                .addComponent(txtMinDiag, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(92, 92, 92))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RhombusPanelLayout.createSequentialGroup()
+                                .addComponent(txtMaxDiag, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(RhombusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(cmbIn2, 0, 55, Short.MAX_VALUE)
+                                    .addComponent(cmbOut2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addContainerGap())))))
         );
         RhombusPanelLayout.setVerticalGroup(
             RhombusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -230,13 +262,16 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(RhombusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblMaxDiag)
-                    .addComponent(txtMaxDiag, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtMaxDiag, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbIn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(RhombusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtMinDiag, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblMinDiag))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnCalculate3)
+                .addGroup(RhombusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCalculate3)
+                    .addComponent(cmbOut2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(16, 16, 16)
                 .addGroup(RhombusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblArea3)
@@ -249,7 +284,7 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
         );
 
         getContentPane().add(RhombusPanel);
-        RhombusPanel.setBounds(640, 50, 280, 200);
+        RhombusPanel.setBounds(690, 50, 310, 200);
 
         ParalelogramPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Trapezoid", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
 
@@ -286,6 +321,10 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
             }
         });
 
+        cmbIn3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\\Km", "Hm", "Dm", "m", "dm", "cm", "mm" }));
+
+        cmbOut3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\\Km", "Hm", "Dm", "m", "dm", "cm", "mm" }));
+
         javax.swing.GroupLayout ParalelogramPanelLayout = new javax.swing.GroupLayout(ParalelogramPanel);
         ParalelogramPanel.setLayout(ParalelogramPanelLayout);
         ParalelogramPanelLayout.setHorizontalGroup(
@@ -293,26 +332,30 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
             .addGroup(ParalelogramPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(ParalelogramPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ParalelogramPanelLayout.createSequentialGroup()
-                        .addComponent(lblPerimeter4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txtPerimeter4, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ParalelogramPanelLayout.createSequentialGroup()
-                        .addGroup(ParalelogramPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnCalculate4, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblArea4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                        .addComponent(txtArea4, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(ParalelogramPanelLayout.createSequentialGroup()
                         .addGroup(ParalelogramPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblHeight2)
                             .addComponent(lblSide2)
                             .addComponent(lblWidth2))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(ParalelogramPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtWidth2, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
-                            .addComponent(txtHeight2)
-                            .addComponent(txtSide2))))
+                        .addGroup(ParalelogramPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtSide2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtWidth2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ParalelogramPanelLayout.createSequentialGroup()
+                                .addComponent(txtHeight2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(ParalelogramPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(cmbIn3, 0, 60, Short.MAX_VALUE)
+                                    .addComponent(cmbOut3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ParalelogramPanelLayout.createSequentialGroup()
+                        .addGroup(ParalelogramPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(lblPerimeter4, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
+                            .addComponent(btnCalculate4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblArea4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                        .addGroup(ParalelogramPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtArea4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtPerimeter4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
         );
         ParalelogramPanelLayout.setVerticalGroup(
@@ -321,7 +364,8 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(ParalelogramPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblHeight2)
-                    .addComponent(txtHeight2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtHeight2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbIn3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(ParalelogramPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblSide2)
@@ -331,7 +375,9 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
                     .addComponent(lblWidth2)
                     .addComponent(txtWidth2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
-                .addComponent(btnCalculate4)
+                .addGroup(ParalelogramPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCalculate4)
+                    .addComponent(cmbOut3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(ParalelogramPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblArea4)
@@ -344,7 +390,7 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
         );
 
         getContentPane().add(ParalelogramPanel);
-        ParalelogramPanel.setBounds(10, 266, 270, 222);
+        ParalelogramPanel.setBounds(10, 266, 310, 222);
 
         TrapezoidPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Trapezoid", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
 
@@ -375,6 +421,10 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
         lblHeight3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblHeight3.setText("Height");
 
+        cmbIn4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\\Km", "Hm", "Dm", "m", "dm", "cm", "mm" }));
+
+        cmbOut4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\\Km", "Hm", "Dm", "m", "dm", "cm", "mm" }));
+
         javax.swing.GroupLayout TrapezoidPanelLayout = new javax.swing.GroupLayout(TrapezoidPanel);
         TrapezoidPanel.setLayout(TrapezoidPanelLayout);
         TrapezoidPanelLayout.setHorizontalGroup(
@@ -384,25 +434,31 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
                 .addGroup(TrapezoidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(TrapezoidPanelLayout.createSequentialGroup()
                         .addGroup(TrapezoidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnCalculate5, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(TrapezoidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(lblPerimeter5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE)
-                                .addComponent(lblArea5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
-                        .addGroup(TrapezoidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtArea5, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
-                            .addComponent(txtPerimeter5, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)))
-                    .addGroup(TrapezoidPanelLayout.createSequentialGroup()
-                        .addGroup(TrapezoidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblHeight3)
                             .addComponent(lblMinBase)
                             .addComponent(lblMaxBase))
+                        .addGap(90, 90, 90)
+                        .addGroup(TrapezoidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtMinBase, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtMaxBase, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(TrapezoidPanelLayout.createSequentialGroup()
+                                .addComponent(txtHeight3, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addGroup(TrapezoidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(TrapezoidPanelLayout.createSequentialGroup()
+                                        .addComponent(cmbIn4, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addComponent(cmbOut4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                    .addGroup(TrapezoidPanelLayout.createSequentialGroup()
+                        .addGroup(TrapezoidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnCalculate5, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblArea5, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
+                            .addComponent(lblPerimeter5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(TrapezoidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtMaxBase, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE)
-                            .addComponent(txtMinBase, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE)
-                            .addComponent(txtHeight3))))
-                .addGap(28, 28, 28))
+                            .addComponent(txtArea5, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
+                            .addComponent(txtPerimeter5, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE))))
+                .addContainerGap())
         );
         TrapezoidPanelLayout.setVerticalGroup(
             TrapezoidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -410,7 +466,8 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(TrapezoidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblHeight3)
-                    .addComponent(txtHeight3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtHeight3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbIn4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(TrapezoidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtMinBase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -420,7 +477,9 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
                     .addComponent(txtMaxBase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblMaxBase))
                 .addGap(18, 18, 18)
-                .addComponent(btnCalculate5)
+                .addGroup(TrapezoidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCalculate5)
+                    .addComponent(cmbOut4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                 .addGroup(TrapezoidPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblArea5)
@@ -433,7 +492,7 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
         );
 
         getContentPane().add(TrapezoidPanel);
-        TrapezoidPanel.setBounds(330, 270, 280, 222);
+        TrapezoidPanel.setBounds(360, 270, 330, 222);
 
         RectanglePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Trapezoid", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
 
@@ -461,6 +520,10 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
 
         txtPerimeter2.setEnabled(false);
 
+        cmbIn1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\\Km", "Hm", "Dm", "m", "dm", "cm", "mm" }));
+
+        cmbOut1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\\Km", "Hm", "Dm", "m", "dm", "cm", "mm" }));
+
         javax.swing.GroupLayout RectanglePanelLayout = new javax.swing.GroupLayout(RectanglePanel);
         RectanglePanel.setLayout(RectanglePanelLayout);
         RectanglePanelLayout.setHorizontalGroup(
@@ -470,26 +533,35 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
                 .addGroup(RectanglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(RectanglePanelLayout.createSequentialGroup()
                         .addGroup(RectanglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(RectanglePanelLayout.createSequentialGroup()
+                                .addComponent(btnCalculate2, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
+                                .addGap(35, 35, 35))
+                            .addGroup(RectanglePanelLayout.createSequentialGroup()
+                                .addGroup(RectanglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(lblArea2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lblPerimeter2, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(RectanglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(RectanglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(txtArea2, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
+                                .addComponent(txtPerimeter2, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE))
+                            .addGroup(RectanglePanelLayout.createSequentialGroup()
+                                .addGap(52, 52, 52)
+                                .addComponent(cmbOut1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap())
+                    .addGroup(RectanglePanelLayout.createSequentialGroup()
+                        .addGroup(RectanglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblWidth, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblHeight, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(RectanglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtWidth)
-                            .addComponent(txtHeight, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RectanglePanelLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                         .addGroup(RectanglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(RectanglePanelLayout.createSequentialGroup()
-                                .addGroup(RectanglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(lblPerimeter2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(lblArea2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(txtHeight, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(128, Short.MAX_VALUE))
                             .addGroup(RectanglePanelLayout.createSequentialGroup()
-                                .addComponent(btnCalculate2, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
-                                .addGap(35, 35, 35)))
-                        .addGroup(RectanglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtArea2, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
-                            .addComponent(txtPerimeter2, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE))))
-                .addContainerGap())
+                                .addComponent(txtWidth, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(cmbIn1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))))))
         );
         RectanglePanelLayout.setVerticalGroup(
             RectanglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -497,13 +569,16 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(RectanglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblWidth)
-                    .addComponent(txtWidth, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtWidth, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbIn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(RectanglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblHeight)
                     .addComponent(txtHeight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnCalculate2)
+                .addGroup(RectanglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCalculate2)
+                    .addComponent(cmbOut1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(23, 23, 23)
                 .addGroup(RectanglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblArea2)
@@ -516,7 +591,7 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
         );
 
         getContentPane().add(RectanglePanel);
-        RectanglePanel.setBounds(330, 50, 280, 199);
+        RectanglePanel.setBounds(360, 50, 310, 200);
 
         jLabel1.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
         jLabel1.setText("Quadrilaterals");
@@ -531,7 +606,7 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnMainMenu);
-        btnMainMenu.setBounds(754, 445, 150, 40);
+        btnMainMenu.setBounds(850, 450, 150, 40);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -556,12 +631,22 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
         btnCalculate3.setText(ComonText.CALCULATE);
         btnCalculate4.setText(ComonText.CALCULATE);
         btnCalculate5.setText(ComonText.CALCULATE);
+        cmbIn.setModel(new javax.swing.DefaultComboBoxModel<>(TransformationComonText.UNITS ));
+        cmbIn1.setModel(new javax.swing.DefaultComboBoxModel<>(TransformationComonText.UNITS ));
+        cmbIn2.setModel(new javax.swing.DefaultComboBoxModel<>(TransformationComonText.UNITS ));
+        cmbIn3.setModel(new javax.swing.DefaultComboBoxModel<>(TransformationComonText.UNITS ));
+        cmbIn4.setModel(new javax.swing.DefaultComboBoxModel<>(TransformationComonText.UNITS ));
+        cmbOut.setModel(new javax.swing.DefaultComboBoxModel<>(TransformationComonText.UNITS ));
+        cmbOut1.setModel(new javax.swing.DefaultComboBoxModel<>(TransformationComonText.UNITS ));
+        cmbOut2.setModel(new javax.swing.DefaultComboBoxModel<>(TransformationComonText.UNITS ));
+        cmbOut3.setModel(new javax.swing.DefaultComboBoxModel<>(TransformationComonText.UNITS ));
+        cmbOut4.setModel(new javax.swing.DefaultComboBoxModel<>(TransformationComonText.UNITS ));
     }
     private void btnCalculate3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalculate3ActionPerformed
         // Rhombus
         try{
         Shape rhombus=new Rhombus(Float.parseFloat(txtMaxDiag.getText()),Float.parseFloat(txtMinDiag.getText()));
-        SupportUtil.showAreaPerimeter(rhombus, txtArea3, txtPerimeter3);
+        SupportUtil.showAreaPerimeter(rhombus, txtArea3, txtPerimeter3,cmbIn2.getSelectedIndex(),cmbOut2.getSelectedIndex());
         }
         catch(NumberFormatException e){
             JOptionPane.showMessageDialog(rootPane, ComonText.ERROR);
@@ -576,7 +661,7 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
         // Square
         try{
         Shape square=new Square(Float.parseFloat(txtSide.getText()));
-        SupportUtil.showAreaPerimeter(square, txtArea, txtPerimeter);
+        SupportUtil.showAreaPerimeter(square, txtArea, txtPerimeter,cmbIn.getSelectedIndex(),cmbOut.getSelectedIndex());
         }
         catch(NumberFormatException e){
             JOptionPane.showMessageDialog(rootPane, ComonText.ERROR);
@@ -587,7 +672,7 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
         // Rectangle
         try{
         Shape rectangle=new Rectangle(Float.parseFloat(txtHeight.getText()),Float.parseFloat(txtWidth.getText()));
-        SupportUtil.showAreaPerimeter(rectangle, txtArea2, txtPerimeter2);
+        SupportUtil.showAreaPerimeter(rectangle, txtArea2, txtPerimeter2,cmbIn1.getSelectedIndex(),cmbOut1.getSelectedIndex());
         }
         catch(NumberFormatException e){
             JOptionPane.showMessageDialog(rootPane, ComonText.ERROR);
@@ -598,7 +683,7 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
         // Paralelogram
         try{
         Shape parallelogram=new Parallelogram(Float.parseFloat(txtHeight2.getText()),Float.parseFloat(txtSide2.getText()),Float.parseFloat(txtWidth2.getText()));
-        SupportUtil.showAreaPerimeter(parallelogram, txtArea4, txtPerimeter4);
+        SupportUtil.showAreaPerimeter(parallelogram, txtArea4, txtPerimeter4,cmbIn3.getSelectedIndex(),cmbOut3.getSelectedIndex());
         }
         catch(NumberFormatException e){
             JOptionPane.showMessageDialog(rootPane, ComonText.ERROR);
@@ -612,7 +697,7 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
         float maxBase=Float.parseFloat(txtMaxBase.getText());
         SupportUtil.MaxMinComparison(maxBase, minBase);
         Shape trapezoid=new Trapezoid(minBase,Float.parseFloat(txtHeight3.getText()),maxBase);
-        SupportUtil.showAreaPerimeter(trapezoid, txtArea5, txtPerimeter5);
+        SupportUtil.showAreaPerimeter(trapezoid, txtArea5, txtPerimeter5,cmbIn4.getSelectedIndex(),cmbOut4.getSelectedIndex());
         }
         catch(NumberFormatException e){
             JOptionPane.showMessageDialog(rootPane, ComonText.ERROR);
@@ -670,6 +755,16 @@ public class QuadrilateralsForm extends javax.swing.JFrame {
     private javax.swing.JButton btnCalculate4;
     private javax.swing.JButton btnCalculate5;
     private javax.swing.JButton btnMainMenu;
+    private javax.swing.JComboBox<String> cmbIn;
+    private javax.swing.JComboBox<String> cmbIn1;
+    private javax.swing.JComboBox<String> cmbIn2;
+    private javax.swing.JComboBox<String> cmbIn3;
+    private javax.swing.JComboBox<String> cmbIn4;
+    private javax.swing.JComboBox<String> cmbOut;
+    private javax.swing.JComboBox<String> cmbOut1;
+    private javax.swing.JComboBox<String> cmbOut2;
+    private javax.swing.JComboBox<String> cmbOut3;
+    private javax.swing.JComboBox<String> cmbOut4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblArea;
     private javax.swing.JLabel lblArea2;

@@ -7,6 +7,7 @@ package ec.edu.espe.graphics.forms;
 
 import ec.edu.espe.graphics.forms.text.ComonText;
 import ec.edu.espe.graphics.forms.text.ShapesCatalog;
+import ec.edu.espe.graphics.forms.text.TransformationComonText;
 import ec.edu.espe.math.geometry.shape.Shape;
 import ec.edu.espe.math.geometry.shape.circumference.Circle;
 import ec.edu.espe.math.geometry.shape.circumference.Ellipse;
@@ -37,6 +38,7 @@ public class CircumferenceForms extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jComboBox6 = new javax.swing.JComboBox<>();
         CirclePanel = new javax.swing.JPanel();
         lblRadius = new javax.swing.JLabel();
         btnCalculate = new javax.swing.JButton();
@@ -45,6 +47,8 @@ public class CircumferenceForms extends javax.swing.JFrame {
         txtRadius = new javax.swing.JTextField();
         txtArea = new javax.swing.JTextField();
         txtPerimeter = new javax.swing.JTextField();
+        cmbIn = new javax.swing.JComboBox<>();
+        cmbOut = new javax.swing.JComboBox<>();
         EllipsePanel = new javax.swing.JPanel();
         lblRadius2 = new javax.swing.JLabel();
         lblOtherRadius = new javax.swing.JLabel();
@@ -55,10 +59,15 @@ public class CircumferenceForms extends javax.swing.JFrame {
         txtOtherRadius = new javax.swing.JTextField();
         txtArea2 = new javax.swing.JTextField();
         txtPerimeter2 = new javax.swing.JTextField();
+        cmbOut2 = new javax.swing.JComboBox<>();
+        cmbIn2 = new javax.swing.JComboBox<>();
         jLabel11 = new javax.swing.JLabel();
         btnMainMenu = new javax.swing.JButton();
 
+        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\\Km", "Hm", "Dm", "m", "dm", "cm", "mm" }));
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(830, 420));
 
         CirclePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
@@ -83,6 +92,10 @@ public class CircumferenceForms extends javax.swing.JFrame {
 
         txtPerimeter.setEnabled(false);
 
+        cmbIn.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\\Km", "Hm", "Dm", "m", "dm", "cm", "mm" }));
+
+        cmbOut.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\\Km", "Hm", "Dm", "m", "dm", "cm", "mm" }));
+
         javax.swing.GroupLayout CirclePanelLayout = new javax.swing.GroupLayout(CirclePanel);
         CirclePanel.setLayout(CirclePanelLayout);
         CirclePanelLayout.setHorizontalGroup(
@@ -95,11 +108,20 @@ public class CircumferenceForms extends javax.swing.JFrame {
                         .addComponent(lblArea, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnCalculate, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE))
                     .addComponent(lblRadius, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(59, 59, 59)
                 .addGroup(CirclePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtPerimeter, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
-                    .addComponent(txtArea)
-                    .addComponent(txtRadius))
+                    .addGroup(CirclePanelLayout.createSequentialGroup()
+                        .addGap(59, 59, 59)
+                        .addGroup(CirclePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtPerimeter, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
+                            .addComponent(txtArea))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(CirclePanelLayout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(txtRadius, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                        .addGroup(CirclePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(cmbIn, 0, 63, Short.MAX_VALUE)
+                            .addComponent(cmbOut, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         CirclePanelLayout.setVerticalGroup(
@@ -108,9 +130,12 @@ public class CircumferenceForms extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(CirclePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblRadius)
-                    .addComponent(txtRadius, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtRadius, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(80, 80, 80)
-                .addComponent(btnCalculate)
+                .addGroup(CirclePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCalculate)
+                    .addComponent(cmbOut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(CirclePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblArea)
@@ -119,7 +144,7 @@ public class CircumferenceForms extends javax.swing.JFrame {
                 .addGroup(CirclePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPerimeter)
                     .addComponent(txtPerimeter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
         EllipsePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -148,6 +173,15 @@ public class CircumferenceForms extends javax.swing.JFrame {
 
         txtPerimeter2.setEnabled(false);
 
+        cmbOut2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\\Km", "Hm", "Dm", "m", "dm", "cm", "mm" }));
+
+        cmbIn2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\\Km", "Hm", "Dm", "m", "dm", "cm", "mm" }));
+        cmbIn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbIn2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout EllipsePanelLayout = new javax.swing.GroupLayout(EllipsePanel);
         EllipsePanel.setLayout(EllipsePanelLayout);
         EllipsePanelLayout.setHorizontalGroup(
@@ -159,14 +193,20 @@ public class CircumferenceForms extends javax.swing.JFrame {
                         .addComponent(lblPerimeter2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lblArea2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnCalculate2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE))
-                    .addComponent(lblRadius2, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblOtherRadius, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(59, 59, 59)
-                .addGroup(EllipsePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtPerimeter2, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
-                    .addComponent(txtArea2)
-                    .addComponent(txtRadius2)
-                    .addComponent(txtOtherRadius))
+                    .addGroup(EllipsePanelLayout.createSequentialGroup()
+                        .addGroup(EllipsePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblRadius2, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblOtherRadius, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(59, 59, 59)
+                        .addGroup(EllipsePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(txtArea2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
+                            .addComponent(txtOtherRadius, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtRadius2, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtPerimeter2))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addGroup(EllipsePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(cmbIn2, 0, 63, Short.MAX_VALUE)
+                    .addComponent(cmbOut2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         EllipsePanelLayout.setVerticalGroup(
@@ -175,13 +215,16 @@ public class CircumferenceForms extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(EllipsePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblRadius2)
-                    .addComponent(txtRadius2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtRadius2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbIn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(EllipsePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblOtherRadius)
                     .addComponent(txtOtherRadius, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(42, 42, 42)
-                .addComponent(btnCalculate2)
+                .addGroup(EllipsePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCalculate2)
+                    .addComponent(cmbOut2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(EllipsePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblArea2)
@@ -190,7 +233,7 @@ public class CircumferenceForms extends javax.swing.JFrame {
                 .addGroup(EllipsePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPerimeter2)
                     .addComponent(txtPerimeter2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -209,19 +252,21 @@ public class CircumferenceForms extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(CirclePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(33, 33, 33)
                         .addComponent(EllipsePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
+                        .addGap(0, 9, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnMainMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel11)
-                        .addGap(224, 224, 224))))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnMainMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(301, 301, 301)
+                .addComponent(jLabel11)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -229,8 +274,8 @@ public class CircumferenceForms extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel11)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(EllipsePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(EllipsePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CirclePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnMainMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -243,7 +288,7 @@ public class CircumferenceForms extends javax.swing.JFrame {
     private void btnCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalculateActionPerformed
         try{
         Shape circle=new Circle(Float.parseFloat(txtRadius.getText()));
-        SupportUtil.showAreaPerimeter(circle, txtArea, txtPerimeter);
+        SupportUtil.showAreaPerimeter(circle, txtArea, txtPerimeter,cmbIn.getSelectedIndex(),cmbOut.getSelectedIndex());
         }
         catch(NumberFormatException e){
             JOptionPane.showMessageDialog(rootPane, ComonText.ERROR);
@@ -253,7 +298,7 @@ public class CircumferenceForms extends javax.swing.JFrame {
     private void btnCalculate2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalculate2ActionPerformed
         try{
         Shape ellipse=new Ellipse(Float.parseFloat(txtRadius2.getText()),Float.parseFloat(txtOtherRadius.getText()));
-        SupportUtil.showAreaPerimeter(ellipse, txtArea2, txtPerimeter2);
+        SupportUtil.showAreaPerimeter(ellipse, txtArea2, txtPerimeter2,cmbIn2.getSelectedIndex(),cmbOut2.getSelectedIndex());
         }
         catch(NumberFormatException e){
             JOptionPane.showMessageDialog(rootPane, ComonText.ERROR);
@@ -263,6 +308,10 @@ public class CircumferenceForms extends javax.swing.JFrame {
     private void btnMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMainMenuActionPerformed
         SupportUtil.openMainMenu(this);
     }//GEN-LAST:event_btnMainMenuActionPerformed
+
+    private void cmbIn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbIn2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbIn2ActionPerformed
     private void initializeComponents(){
         CirclePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(ShapesCatalog.CIRCLE));
         EllipsePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(ShapesCatalog.ELLIPSE));
@@ -272,6 +321,11 @@ public class CircumferenceForms extends javax.swing.JFrame {
         lblRadius2.setText(ComonText.RADIUS);
         btnCalculate.setText(ComonText.CALCULATE);
         btnCalculate2.setText(ComonText.CALCULATE);
+        cmbIn.setModel(new javax.swing.DefaultComboBoxModel<>(TransformationComonText.UNITS ));
+        cmbIn2.setModel(new javax.swing.DefaultComboBoxModel<>(TransformationComonText.UNITS ));
+        cmbOut.setModel(new javax.swing.DefaultComboBoxModel<>(TransformationComonText.UNITS ));
+        cmbOut2.setModel(new javax.swing.DefaultComboBoxModel<>(TransformationComonText.UNITS ));
+        
     }
     
     /**
@@ -315,6 +369,11 @@ public class CircumferenceForms extends javax.swing.JFrame {
     private javax.swing.JButton btnCalculate;
     private javax.swing.JButton btnCalculate2;
     private javax.swing.JButton btnMainMenu;
+    private javax.swing.JComboBox<String> cmbIn;
+    private javax.swing.JComboBox<String> cmbIn2;
+    private javax.swing.JComboBox<String> cmbOut;
+    private javax.swing.JComboBox<String> cmbOut2;
+    private javax.swing.JComboBox<String> jComboBox6;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel lblArea;
     private javax.swing.JLabel lblArea2;

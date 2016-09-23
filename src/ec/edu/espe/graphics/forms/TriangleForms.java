@@ -7,6 +7,7 @@ package ec.edu.espe.graphics.forms;
 
 import ec.edu.espe.graphics.forms.text.ComonText;
 import ec.edu.espe.graphics.forms.text.ShapesCatalog;
+import ec.edu.espe.graphics.forms.text.TransformationComonText;
 import ec.edu.espe.math.geometry.shape.Shape;
 import ec.edu.espe.math.geometry.shape.triangles.EquilateralTriangle;
 import ec.edu.espe.math.geometry.shape.triangles.IsocelesTriangle;
@@ -48,6 +49,8 @@ public class TriangleForms extends javax.swing.JFrame {
         lblArea = new javax.swing.JLabel();
         lblPerimeter = new javax.swing.JLabel();
         txtPerimeter = new javax.swing.JTextField();
+        cmbIn = new javax.swing.JComboBox<>();
+        cmbOut = new javax.swing.JComboBox<>();
         IsocelesPanel = new javax.swing.JPanel();
         lblSide2 = new javax.swing.JLabel();
         lblBase = new javax.swing.JLabel();
@@ -58,6 +61,8 @@ public class TriangleForms extends javax.swing.JFrame {
         lblArea1 = new javax.swing.JLabel();
         lblPerimeter1 = new javax.swing.JLabel();
         txtPerimeter1 = new javax.swing.JTextField();
+        cmbIn1 = new javax.swing.JComboBox<>();
+        cmbOut1 = new javax.swing.JComboBox<>();
         RightAnglePanel = new javax.swing.JPanel();
         lblHeight = new javax.swing.JLabel();
         lblBase2 = new javax.swing.JLabel();
@@ -68,6 +73,8 @@ public class TriangleForms extends javax.swing.JFrame {
         lblArea2 = new javax.swing.JLabel();
         lblPerimeter2 = new javax.swing.JLabel();
         txtPerimeter2 = new javax.swing.JTextField();
+        cmbIn2 = new javax.swing.JComboBox<>();
+        cmbOut2 = new javax.swing.JComboBox<>();
         ObtuseAnglePanel = new javax.swing.JPanel();
         lblSide3 = new javax.swing.JLabel();
         lblHeight2 = new javax.swing.JLabel();
@@ -80,6 +87,8 @@ public class TriangleForms extends javax.swing.JFrame {
         lblArea3 = new javax.swing.JLabel();
         lblPerimeter3 = new javax.swing.JLabel();
         txtPerimeter3 = new javax.swing.JTextField();
+        cmbIn3 = new javax.swing.JComboBox<>();
+        cmbOut3 = new javax.swing.JComboBox<>();
         EscalenePanel = new javax.swing.JPanel();
         lblSideA = new javax.swing.JLabel();
         lblSideB = new javax.swing.JLabel();
@@ -92,10 +101,13 @@ public class TriangleForms extends javax.swing.JFrame {
         lblArea4 = new javax.swing.JLabel();
         lblPerimeter4 = new javax.swing.JLabel();
         txtPerimeter4 = new javax.swing.JTextField();
+        cmbIn4 = new javax.swing.JComboBox<>();
+        cmbOut4 = new javax.swing.JComboBox<>();
         btnMainMenu = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1070, 700));
 
         EquilateralPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
 
@@ -120,43 +132,56 @@ public class TriangleForms extends javax.swing.JFrame {
 
         txtPerimeter.setEnabled(false);
 
+        cmbIn.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\\Km", "Hm", "Dm", "m", "dm", "cm", "mm" }));
+
+        cmbOut.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\\Km", "Hm", "Dm", "m", "dm", "cm", "mm" }));
+
         javax.swing.GroupLayout EquilateralPanelLayout = new javax.swing.GroupLayout(EquilateralPanel);
         EquilateralPanel.setLayout(EquilateralPanelLayout);
         EquilateralPanelLayout.setHorizontalGroup(
             EquilateralPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EquilateralPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(EquilateralPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, EquilateralPanelLayout.createSequentialGroup()
-                        .addComponent(lblSide, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(70, 70, 70)
-                        .addComponent(txtSide))
+                .addGroup(EquilateralPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(EquilateralPanelLayout.createSequentialGroup()
                         .addGroup(EquilateralPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EquilateralPanelLayout.createSequentialGroup()
-                                .addComponent(btnCalculate, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                                .addComponent(btnCalculate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(51, 51, 51))
                             .addGroup(EquilateralPanelLayout.createSequentialGroup()
-                                .addGroup(EquilateralPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblArea, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblPerimeter, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(EquilateralPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(lblArea, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
+                                    .addComponent(lblPerimeter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addGroup(EquilateralPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtPerimeter, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtArea, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(20, 20, 20))
+                            .addComponent(txtArea, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(EquilateralPanelLayout.createSequentialGroup()
+                                .addGap(37, 37, 37)
+                                .addComponent(cmbOut, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(EquilateralPanelLayout.createSequentialGroup()
+                        .addComponent(lblSide, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                        .addComponent(txtSide, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(cmbIn, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(2, 2, 2))
         );
         EquilateralPanelLayout.setVerticalGroup(
             EquilateralPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(EquilateralPanelLayout.createSequentialGroup()
-                .addGap(31, 31, 31)
+                .addGap(34, 34, 34)
                 .addGroup(EquilateralPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(EquilateralPanelLayout.createSequentialGroup()
-                        .addGroup(EquilateralPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(EquilateralPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblSide)
-                            .addComponent(txtSide, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(EquilateralPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(cmbIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtSide, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(63, 63, 63)
-                        .addComponent(btnCalculate)
+                        .addGroup(EquilateralPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnCalculate)
+                            .addComponent(cmbOut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(29, 29, 29)
                         .addComponent(txtArea, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(lblArea))
@@ -193,35 +218,44 @@ public class TriangleForms extends javax.swing.JFrame {
 
         txtPerimeter1.setEnabled(false);
 
+        cmbIn1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\\Km", "Hm", "Dm", "m", "dm", "cm", "mm" }));
+
+        cmbOut1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\\Km", "Hm", "Dm", "m", "dm", "cm", "mm" }));
+
         javax.swing.GroupLayout IsocelesPanelLayout = new javax.swing.GroupLayout(IsocelesPanel);
         IsocelesPanel.setLayout(IsocelesPanelLayout);
         IsocelesPanelLayout.setHorizontalGroup(
             IsocelesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, IsocelesPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(IsocelesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, IsocelesPanelLayout.createSequentialGroup()
+                .addGroup(IsocelesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(IsocelesPanelLayout.createSequentialGroup()
+                        .addGroup(IsocelesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblArea1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnCalculate1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblPerimeter1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(51, 51, 51)
+                        .addGroup(IsocelesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(IsocelesPanelLayout.createSequentialGroup()
+                                .addGroup(IsocelesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtPerimeter1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(20, 20, 20))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, IsocelesPanelLayout.createSequentialGroup()
+                                .addComponent(cmbOut1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap())))
+                    .addGroup(IsocelesPanelLayout.createSequentialGroup()
                         .addGroup(IsocelesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(lblBase, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(lblSide2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(83, 83, 83)
-                        .addGroup(IsocelesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtSide2, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtBase, javax.swing.GroupLayout.Alignment.TRAILING)))
-                    .addGroup(IsocelesPanelLayout.createSequentialGroup()
+                        .addGap(63, 63, 63)
                         .addGroup(IsocelesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(IsocelesPanelLayout.createSequentialGroup()
-                                .addComponent(btnCalculate1, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
-                                .addGap(51, 51, 51))
-                            .addGroup(IsocelesPanelLayout.createSequentialGroup()
-                                .addGroup(IsocelesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblPerimeter1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGroup(IsocelesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtPerimeter1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(20, 20, 20))
+                                .addComponent(txtSide2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(26, 26, 26)
+                                .addComponent(cmbIn1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtBase, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 10, Short.MAX_VALUE))))
         );
         IsocelesPanelLayout.setVerticalGroup(
             IsocelesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -229,7 +263,9 @@ public class TriangleForms extends javax.swing.JFrame {
                 .addGap(31, 31, 31)
                 .addGroup(IsocelesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(IsocelesPanelLayout.createSequentialGroup()
-                        .addComponent(txtSide2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(IsocelesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtSide2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cmbIn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtBase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(IsocelesPanelLayout.createSequentialGroup()
@@ -239,7 +275,9 @@ public class TriangleForms extends javax.swing.JFrame {
                 .addGap(37, 37, 37)
                 .addGroup(IsocelesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, IsocelesPanelLayout.createSequentialGroup()
-                        .addComponent(btnCalculate1)
+                        .addGroup(IsocelesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnCalculate1)
+                            .addComponent(cmbOut1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(29, 29, 29)
                         .addComponent(txtArea1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(lblArea1, javax.swing.GroupLayout.Alignment.TRAILING))
@@ -247,7 +285,7 @@ public class TriangleForms extends javax.swing.JFrame {
                 .addGroup(IsocelesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPerimeter1)
                     .addComponent(txtPerimeter1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         RightAnglePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
@@ -257,6 +295,12 @@ public class TriangleForms extends javax.swing.JFrame {
 
         lblBase2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lblBase2.setText("jLabel3");
+
+        txtBase2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtBase2ActionPerformed(evt);
+            }
+        });
 
         btnCalculate2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnCalculate2.setText("jButton1");
@@ -276,35 +320,44 @@ public class TriangleForms extends javax.swing.JFrame {
 
         txtPerimeter2.setEnabled(false);
 
+        cmbIn2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\\Km", "Hm", "Dm", "m", "dm", "cm", "mm" }));
+
+        cmbOut2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\\Km", "Hm", "Dm", "m", "dm", "cm", "mm" }));
+
         javax.swing.GroupLayout RightAnglePanelLayout = new javax.swing.GroupLayout(RightAnglePanel);
         RightAnglePanel.setLayout(RightAnglePanelLayout);
         RightAnglePanelLayout.setHorizontalGroup(
             RightAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RightAnglePanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(RightAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, RightAnglePanelLayout.createSequentialGroup()
+                .addGroup(RightAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(RightAnglePanelLayout.createSequentialGroup()
+                        .addGroup(RightAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblArea2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnCalculate2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblPerimeter2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(51, 51, 51)
+                        .addGroup(RightAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(RightAnglePanelLayout.createSequentialGroup()
+                                .addGroup(RightAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtPerimeter2, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtArea2, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(52, 52, 52))
+                            .addGroup(RightAnglePanelLayout.createSequentialGroup()
+                                .addGap(65, 65, 65)
+                                .addComponent(cmbOut2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(9, 9, 9))))
+                    .addGroup(RightAnglePanelLayout.createSequentialGroup()
                         .addGroup(RightAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(lblBase2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(lblHeight, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(83, 83, 83)
-                        .addGroup(RightAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtHeight, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtBase2, javax.swing.GroupLayout.Alignment.TRAILING)))
-                    .addGroup(RightAnglePanelLayout.createSequentialGroup()
-                        .addGroup(RightAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(RightAnglePanelLayout.createSequentialGroup()
-                                .addComponent(btnCalculate2, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
-                                .addGap(51, 51, 51))
-                            .addGroup(RightAnglePanelLayout.createSequentialGroup()
-                                .addGroup(RightAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblArea2, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblPerimeter2, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGroup(RightAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtPerimeter2, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtArea2, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(20, 20, 20))
+                        .addGap(82, 82, 82)
+                        .addGroup(RightAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtHeight, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtBase2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                        .addComponent(cmbIn2, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
         RightAnglePanelLayout.setVerticalGroup(
             RightAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -312,7 +365,9 @@ public class TriangleForms extends javax.swing.JFrame {
                 .addGap(31, 31, 31)
                 .addGroup(RightAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(RightAnglePanelLayout.createSequentialGroup()
-                        .addComponent(txtHeight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(RightAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtHeight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cmbIn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtBase2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(RightAnglePanelLayout.createSequentialGroup()
@@ -322,8 +377,13 @@ public class TriangleForms extends javax.swing.JFrame {
                 .addGap(37, 37, 37)
                 .addGroup(RightAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RightAnglePanelLayout.createSequentialGroup()
-                        .addComponent(btnCalculate2)
-                        .addGap(29, 29, 29)
+                        .addGroup(RightAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(RightAnglePanelLayout.createSequentialGroup()
+                                .addComponent(btnCalculate2)
+                                .addGap(29, 29, 29))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, RightAnglePanelLayout.createSequentialGroup()
+                                .addComponent(cmbOut2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                         .addComponent(txtArea2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(lblArea2, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(18, 18, 18)
@@ -362,37 +422,46 @@ public class TriangleForms extends javax.swing.JFrame {
 
         txtPerimeter3.setEnabled(false);
 
+        cmbIn3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\\Km", "Hm", "Dm", "m", "dm", "cm", "mm" }));
+
+        cmbOut3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\\Km", "Hm", "Dm", "m", "dm", "cm", "mm" }));
+
         javax.swing.GroupLayout ObtuseAnglePanelLayout = new javax.swing.GroupLayout(ObtuseAnglePanel);
         ObtuseAnglePanel.setLayout(ObtuseAnglePanelLayout);
         ObtuseAnglePanelLayout.setHorizontalGroup(
             ObtuseAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ObtuseAnglePanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(ObtuseAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ObtuseAnglePanelLayout.createSequentialGroup()
+                .addGroup(ObtuseAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ObtuseAnglePanelLayout.createSequentialGroup()
+                        .addGroup(ObtuseAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblArea3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnCalculate3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblPerimeter3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(51, 51, 51)
+                        .addGroup(ObtuseAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtPerimeter3, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtArea3, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(20, 20, 20))
+                    .addGroup(ObtuseAnglePanelLayout.createSequentialGroup()
                         .addGroup(ObtuseAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(lblSide3, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
                             .addComponent(lblHeight2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(lblBase3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(47, 47, 47)
-                        .addGroup(ObtuseAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtSide3, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtHeight2, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtBase3, javax.swing.GroupLayout.Alignment.TRAILING)))
-                    .addGroup(ObtuseAnglePanelLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
                         .addGroup(ObtuseAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(ObtuseAnglePanelLayout.createSequentialGroup()
-                                .addComponent(btnCalculate3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(51, 51, 51))
+                                .addComponent(txtBase3, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(ObtuseAnglePanelLayout.createSequentialGroup()
                                 .addGroup(ObtuseAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblArea3, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblPerimeter3, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGroup(ObtuseAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtPerimeter3, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtArea3, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(20, 20, 20))
+                                    .addComponent(txtHeight2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtSide3, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(ObtuseAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cmbIn3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(cmbOut3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(10, 10, 10))))
         );
         ObtuseAnglePanelLayout.setVerticalGroup(
             ObtuseAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -400,23 +469,27 @@ public class TriangleForms extends javax.swing.JFrame {
                 .addGap(31, 31, 31)
                 .addGroup(ObtuseAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ObtuseAnglePanelLayout.createSequentialGroup()
-                        .addComponent(txtSide3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtHeight2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtBase3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(ObtuseAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtSide3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cmbIn3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(69, 69, 69))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ObtuseAnglePanelLayout.createSequentialGroup()
                         .addComponent(lblSide3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblHeight2)
+                        .addGroup(ObtuseAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblHeight2)
+                            .addComponent(txtHeight2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblBase3)
-                        .addGap(10, 10, 10)))
+                        .addGroup(ObtuseAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblBase3)
+                            .addComponent(txtBase3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(24, 24, 24)))
+                .addGroup(ObtuseAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnCalculate3)
+                    .addComponent(cmbOut3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(ObtuseAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ObtuseAnglePanelLayout.createSequentialGroup()
-                        .addComponent(btnCalculate3)
-                        .addGap(29, 29, 29)
-                        .addComponent(txtArea3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtArea3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblArea3, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(18, 18, 18)
                 .addGroup(ObtuseAnglePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -454,37 +527,47 @@ public class TriangleForms extends javax.swing.JFrame {
 
         txtPerimeter4.setEnabled(false);
 
+        cmbIn4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\\Km", "Hm", "Dm", "m", "dm", "cm", "mm" }));
+
+        cmbOut4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\\Km", "Hm", "Dm", "m", "dm", "cm", "mm" }));
+
         javax.swing.GroupLayout EscalenePanelLayout = new javax.swing.GroupLayout(EscalenePanel);
         EscalenePanel.setLayout(EscalenePanelLayout);
         EscalenePanelLayout.setHorizontalGroup(
             EscalenePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EscalenePanelLayout.createSequentialGroup()
+            .addGroup(EscalenePanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(EscalenePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, EscalenePanelLayout.createSequentialGroup()
+                .addGroup(EscalenePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(EscalenePanelLayout.createSequentialGroup()
                         .addGroup(EscalenePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(lblSideC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(lblSideB, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(lblSideA, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(83, 83, 83)
+                        .addGap(65, 65, 65)
                         .addGroup(EscalenePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtSideA, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtSideB, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtSideC, javax.swing.GroupLayout.Alignment.TRAILING)))
-                    .addGroup(EscalenePanelLayout.createSequentialGroup()
+                            .addComponent(txtSideC, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(EscalenePanelLayout.createSequentialGroup()
+                                .addGroup(EscalenePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtSideB, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtSideA, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(cmbIn4, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 18, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EscalenePanelLayout.createSequentialGroup()
                         .addGroup(EscalenePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(EscalenePanelLayout.createSequentialGroup()
                                 .addComponent(btnCalculate4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(51, 51, 51))
+                                .addGap(93, 93, 93)
+                                .addComponent(cmbOut4, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(EscalenePanelLayout.createSequentialGroup()
                                 .addGroup(EscalenePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblArea4, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblPerimeter4, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGroup(EscalenePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtPerimeter4, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtArea4, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(20, 20, 20))
+                                    .addComponent(lblArea4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lblPerimeter4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(71, 71, 71)
+                                .addGroup(EscalenePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtPerimeter4, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtArea4, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(20, 20, 20))))
         );
         EscalenePanelLayout.setVerticalGroup(
             EscalenePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -492,7 +575,9 @@ public class TriangleForms extends javax.swing.JFrame {
                 .addGap(31, 31, 31)
                 .addGroup(EscalenePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(EscalenePanelLayout.createSequentialGroup()
-                        .addComponent(txtSideA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(EscalenePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtSideA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cmbIn4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtSideB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -504,11 +589,13 @@ public class TriangleForms extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lblSideC)
                         .addGap(9, 9, 9)))
+                .addGap(18, 18, 18)
+                .addGroup(EscalenePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnCalculate4)
+                    .addComponent(cmbOut4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(EscalenePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EscalenePanelLayout.createSequentialGroup()
-                        .addComponent(btnCalculate4)
-                        .addGap(29, 29, 29)
-                        .addComponent(txtArea4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtArea4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblArea4, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(18, 18, 18)
                 .addGroup(EscalenePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -533,24 +620,30 @@ public class TriangleForms extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(EquilateralPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ObtuseAnglePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(EscalenePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(IsocelesPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(EquilateralPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(ObtuseAnglePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(EscalenePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(IsocelesPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(RightAnglePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnMainMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(RightAnglePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(402, 402, 402)
-                        .addComponent(jLabel1)))
-                .addContainerGap(18, Short.MAX_VALUE))
+                        .addGap(112, 112, 112)
+                        .addComponent(btnMainMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(402, 402, 402)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -563,18 +656,16 @@ public class TriangleForms extends javax.swing.JFrame {
                     .addComponent(IsocelesPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(RightAnglePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(ObtuseAnglePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(EscalenePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnMainMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(19, 19, 19))))
+                        .addGap(19, 19, 19))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(EscalenePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ObtuseAnglePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         pack();
@@ -584,7 +675,7 @@ public class TriangleForms extends javax.swing.JFrame {
         //Equilateral
         try{
         Shape equilateral=new EquilateralTriangle(Float.parseFloat(txtSide.getText()));
-        SupportUtil.showAreaPerimeter(equilateral, txtArea, txtPerimeter);
+        SupportUtil.showAreaPerimeter(equilateral, txtArea, txtPerimeter,cmbIn.getSelectedIndex(),cmbOut.getSelectedIndex());
         }
         catch(NumberFormatException e){
             JOptionPane.showMessageDialog(rootPane, ComonText.ERROR);
@@ -598,7 +689,7 @@ public class TriangleForms extends javax.swing.JFrame {
         float base=Float.parseFloat(txtBase.getText());
         SupportUtil.MaxMinComparison(side2*2, base);
         Shape isoceles=new IsocelesTriangle(side2,base);
-        SupportUtil.showAreaPerimeter(isoceles, txtArea1, txtPerimeter1);
+        SupportUtil.showAreaPerimeter(isoceles, txtArea1, txtPerimeter1,cmbIn1.getSelectedIndex(),cmbOut1.getSelectedIndex());
         }
         catch(NumberFormatException e){
             JOptionPane.showMessageDialog(rootPane, ComonText.ERROR);
@@ -609,7 +700,7 @@ public class TriangleForms extends javax.swing.JFrame {
         // Right Angle
         try{
         Shape rightangle=new RightAngleTriangle(Float.parseFloat(txtBase2.getText()),Float.parseFloat(txtHeight.getText()));
-        SupportUtil.showAreaPerimeter(rightangle, txtArea2, txtPerimeter2);
+        SupportUtil.showAreaPerimeter(rightangle, txtArea2, txtPerimeter2,cmbIn2.getSelectedIndex(),cmbOut2.getSelectedIndex());
         }
         catch(NumberFormatException e){
             JOptionPane.showMessageDialog(rootPane, ComonText.ERROR);
@@ -623,7 +714,7 @@ public class TriangleForms extends javax.swing.JFrame {
         float height2=Float.parseFloat(txtHeight2.getText());
         SupportUtil.MaxMinComparison(side3, height2);
         Shape obtuseangle=new ObtuseAngleTriangle(side3,Float.parseFloat(txtBase3.getText()),height2);
-        SupportUtil.showAreaPerimeter(obtuseangle, txtArea3, txtPerimeter3);
+        SupportUtil.showAreaPerimeter(obtuseangle, txtArea3, txtPerimeter3,cmbIn3.getSelectedIndex(),cmbOut3.getSelectedIndex());
         }
         catch(NumberFormatException e){
             JOptionPane.showMessageDialog(rootPane, ComonText.ERROR);
@@ -640,7 +731,7 @@ public class TriangleForms extends javax.swing.JFrame {
         SupportUtil.MaxMinComparison(sideA+sideC, sideB);
         SupportUtil.MaxMinComparison(sideC+sideB, sideA);
         Shape escalene=new ScaleneTriangle(Float.parseFloat(txtSideA.getText()),Float.parseFloat(txtSideB.getText()),Float.parseFloat(txtSideC.getText()), 0);
-        SupportUtil.showAreaPerimeter(escalene, txtArea4, txtPerimeter4);
+        SupportUtil.showAreaPerimeter(escalene, txtArea4, txtPerimeter4,cmbIn4.getSelectedIndex(),cmbOut4.getSelectedIndex());
         }
         catch(NumberFormatException e){
             JOptionPane.showMessageDialog(rootPane, ComonText.ERROR);
@@ -650,6 +741,10 @@ public class TriangleForms extends javax.swing.JFrame {
     private void btnMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMainMenuActionPerformed
        SupportUtil.openMainMenu(this);
     }//GEN-LAST:event_btnMainMenuActionPerformed
+
+    private void txtBase2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBase2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtBase2ActionPerformed
     private void initializeComponents(){
         EquilateralPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(ShapesCatalog.EQUILATERAL_TRIANGLE));
         IsocelesPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(ShapesCatalog.ISOCELES_TRIANGLE));
@@ -671,7 +766,16 @@ public class TriangleForms extends javax.swing.JFrame {
         btnCalculate2.setText(ComonText.CALCULATE);
         btnCalculate3.setText(ComonText.CALCULATE);
         btnCalculate4.setText(ComonText.CALCULATE);
-        
+        cmbIn.setModel(new javax.swing.DefaultComboBoxModel<>(TransformationComonText.UNITS ));
+        cmbIn1.setModel(new javax.swing.DefaultComboBoxModel<>(TransformationComonText.UNITS ));
+        cmbIn2.setModel(new javax.swing.DefaultComboBoxModel<>(TransformationComonText.UNITS ));
+        cmbIn3.setModel(new javax.swing.DefaultComboBoxModel<>(TransformationComonText.UNITS ));
+        cmbIn4.setModel(new javax.swing.DefaultComboBoxModel<>(TransformationComonText.UNITS ));
+        cmbOut.setModel(new javax.swing.DefaultComboBoxModel<>(TransformationComonText.UNITS ));
+        cmbOut1.setModel(new javax.swing.DefaultComboBoxModel<>(TransformationComonText.UNITS ));
+        cmbOut2.setModel(new javax.swing.DefaultComboBoxModel<>(TransformationComonText.UNITS ));
+        cmbOut3.setModel(new javax.swing.DefaultComboBoxModel<>(TransformationComonText.UNITS ));
+        cmbOut4.setModel(new javax.swing.DefaultComboBoxModel<>(TransformationComonText.UNITS ));
     }
     /**
      * @param args the command line arguments
@@ -720,6 +824,16 @@ public class TriangleForms extends javax.swing.JFrame {
     private javax.swing.JButton btnCalculate3;
     private javax.swing.JButton btnCalculate4;
     private javax.swing.JButton btnMainMenu;
+    private javax.swing.JComboBox<String> cmbIn;
+    private javax.swing.JComboBox<String> cmbIn1;
+    private javax.swing.JComboBox<String> cmbIn2;
+    private javax.swing.JComboBox<String> cmbIn3;
+    private javax.swing.JComboBox<String> cmbIn4;
+    private javax.swing.JComboBox<String> cmbOut;
+    private javax.swing.JComboBox<String> cmbOut1;
+    private javax.swing.JComboBox<String> cmbOut2;
+    private javax.swing.JComboBox<String> cmbOut3;
+    private javax.swing.JComboBox<String> cmbOut4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblArea;
     private javax.swing.JLabel lblArea1;
